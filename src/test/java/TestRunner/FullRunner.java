@@ -1,14 +1,14 @@
 package TestRunner;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
 @CucumberOptions(
         features = "classpath:Features",
         glue = "StepDefinitions",
         monochrome = true
 )
-public class FullRunner {
+public class FullRunner extends AbstractTestNGCucumberTests {
 }
